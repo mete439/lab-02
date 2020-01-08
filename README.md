@@ -2,10 +2,10 @@
 J query
 Number and name of feature: ________________________________
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 5 Hours
 
-Start time: _____
+Start time: 6:30 pm on 01/07/2019
 
-Finish time: _____
+Finish time: on progress
 
 Actual time needed to complete: _____
