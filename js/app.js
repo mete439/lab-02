@@ -1,6 +1,6 @@
 'use strict';
 
-
+Display.allDisplay = [];
 
 function Display(display){
   this.image_url = display.image_url;
@@ -9,12 +9,14 @@ function Display(display){
   this.description = display.description;
   this.keyword = display.keyword;
 }
-Display.allDisplay = [];
+
 
 Display.prototype.render = function(){
-  console.log('in render method');
-  $('#sel-first').append(`<option class = "get"> </option>`);
-  let displaySelect = $('option[class = "get"]');
+  //console.log('in render method');
+  $('main').append('<div class="get"></div>');
+
+  // $('#sel-first').append(`<option class = "get"> </option>`);
+  let displaySelect = $('div[class = "get"]');
   let displayGet = $('#template').html();
   displaySelect.html(displayGet);
 
@@ -42,13 +44,36 @@ Display.readJson = () => {
       //   $('main').append(display.render());
       // });
     })
-    .then(() => Display.allDisplay.forEach(display => display.render()));
+    .then(() => Display.allDisplay.forEach(display => display.render()))
+    .then(Display.imagesFilter);
 
 };
 Display.loadDisplay = () =>{
   Display.allDisplay.forEach(dis => dis.render());
 };
 
+
+
+Display.imagesFilter = () => {
+  let filterkeyword = [];
+  $('option').not(':first').remove();
+  Display.allDisplay.forEach(display =>{
+    if(!filterkeyword.includes(display.keyword)) filterkeyword.push(display.keyword);
+  });
+  filterkeyword.sort();
+  filterkeyword.forEach(keyword => {
+    let optionTag = `<option value="${keyword}">${keyword}</option>`;
+    $('select').append(optionTag);
+  });
+};
+
+// Display.imagesHandler = () =>{
+// let click = [];
+// Display.allDisplay.forEach(keyword => {
+//   if()
+
+// });
+//}
 $(Display.readJson());
 
 
