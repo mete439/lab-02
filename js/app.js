@@ -66,7 +66,7 @@ Display.imagesFilter = () => {
     $('select').append(optionTag);
   });
 };
-// 
+// Code refere from class mates
 $('select').on('change',(event)=>{
   let option = event.target.value;
   $('div').hide();
