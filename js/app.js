@@ -66,14 +66,12 @@ Display.imagesFilter = () => {
     $('select').append(optionTag);
   });
 };
-
-// Display.imagesHandler = () =>{
-// let click = [];
-// Display.allDisplay.forEach(keyword => {
-//   if()
-
-// });
-//}
+// 
+$('select').on('change',(event)=>{
+  let option = event.target.value;
+  $('div').hide();
+  $(`.${option}`).show();
+});
 $(Display.readJson());
 
 
