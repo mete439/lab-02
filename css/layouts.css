@@ -1,0 +1,18 @@
+body{
+  background-color: azure;
+  width: 960px;
+  margin: 0 auto;
+}
+div{
+  float: left;
+font-size: small;
+  
+}
+img{
+  width: 200px;
+  height: 200px;
+  border: blue solid;
+}
+h2{
+  font-family: sans-serif;
+}
