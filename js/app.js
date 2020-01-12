@@ -12,10 +12,7 @@ function Display(display){
 
 
 Display.prototype.render = function(){
-  //console.log('in render method');
   $('main').append('<div class="get"></div>');
-
-  // $('#sel-first').append(`<option class = "get"> </option>`);
   let displaySelect = $('div[class = "get"]');
   let displayGet = $('#template').html();
   displaySelect.html(displayGet);
@@ -30,29 +27,20 @@ Display.prototype.render = function(){
 
 };
 Display.prototype.loadDisplay = function(){
-  // Display.allDisplay.forEach(display => display.render());
 };
-// Display.allDisplay.forEach(display => display.render);
 Display.readJson = () => {
   $.get('./data/page-1.json', 'json')
     .then(data => {
-      //console.log(data);
       data.forEach(item => {
         Display.allDisplay.push(new Display(item));
       });
-      // Display.allDisplay.forEach(display => {
-      //   $('main').append(display.render());
-      // });
     })
     .then(() => Display.allDisplay.forEach(display => display.render()))
     .then(Display.imagesFilter);
-
 };
 Display.loadDisplay = () =>{
   Display.allDisplay.forEach(dis => dis.render());
 };
-
-
 
 Display.imagesFilter = () => {
   let filterkeyword = [];
@@ -66,7 +54,6 @@ Display.imagesFilter = () => {
     $('select').append(optionTag);
   });
 };
-// Code refere from class mates
 $('select').on('change',(event)=>{
   let option = event.target.value;
   $('div').hide();

@@ -1,5 +1,5 @@
 body{
-  background-color: azure;
+  background-color: grey;
   width: 960px;
   margin: 0 auto;
 }
@@ -12,7 +12,9 @@ img{
   width: 200px;
   height: 200px;
   border: blue solid;
+  border-radius: 15%;
 }
 h2{
   font-family: sans-serif;
 }
+
