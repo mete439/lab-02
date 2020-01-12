@@ -1,20 +1,24 @@
 body{
+
   background-color: grey;
+
+  background-color: rgb(58, 105, 105);
+
   width: 960px;
   margin: 0 auto;
 }
-div{
-  float: left;
+main{
+  float: none;
 font-size: small;
   
 }
 img{
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border: blue solid;
   border-radius: 15%;
 }
 h2{
-  font-family: sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
