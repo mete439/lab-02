@@ -1,15 +1,14 @@
 body{
-
-  background-color: grey;
-
-  background-color: rgb(58, 105, 105);
-
+  background-color: grey; 
   width: 960px;
+  height: min-content;
   margin: 0 auto;
 }
 main{
   float: none;
-font-size: small;
+  font-size: small;
+  height: 1000px;
+  display: inline-block;
   
 }
 img{
@@ -17,8 +16,13 @@ img{
   height: 300px;
   border: blue solid;
   border-radius: 15%;
+  
+
+
 }
 h2{
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
+/* h2,h3,h4,h5 img {
+  display: inline-block;
+} */
